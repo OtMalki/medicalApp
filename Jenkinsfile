@@ -42,7 +42,7 @@ pipeline {
 	 	    '''
 	    	}
 	    }
-	]
+	}
 	stage('Clean') {
 	    steps {
 		sh '''
