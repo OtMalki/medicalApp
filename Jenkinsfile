@@ -38,7 +38,7 @@ pipeline {
 	    steps {
 		node {
 		    sh '''
-      			firebase appdistribution:distribute build\app\outputs\flutter-apk\app-release.apk --app 1:205437649078:android:46c944aac773f384c96617 --groups medical-App-Group
+      			firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk --app 1:205437649078:android:46c944aac773f384c96617 --groups medical-App-Group
 	 	    '''
 		}
 	    }
