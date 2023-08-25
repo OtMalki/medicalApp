@@ -34,14 +34,21 @@ pipeline {
 		'''
             }
         }
-	stage('Distribute Android APK') {
-      	    steps {
-          	appCenter apiToken: 'd404867f8a03d127d40d944e9e60328edb49a1a9',
-                  ownerName: 'MALKIOT',
-                  appName: 'medicalApp',
-                  pathToApp: 'build/app/outputs/flutter-apk/app-release.apk',
-                  distributionGroups: 'medicalApp-Distribution'
-      	    }
+	stage('Firebase Distribution') {
+	    steps {
+		node {
+		    sh '''
+      			firebase appdistribution:distribute build\app\outputs\flutter-apk\app-release.apk --app 1:205437649078:android:46c944aac773f384c96617 --groups medical-App-Group
+	 	    '''
+		}
 	    }
+	}
+	stage('Clean') {
+	    steps {
+		sh '''
+  		    flutter clean
+  		'''
+	    }
+	}
     }
 }
