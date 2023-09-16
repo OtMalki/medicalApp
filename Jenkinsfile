@@ -1,7 +1,7 @@
 pipeline {
     agent { 
 	docker{
-		image 'instrumentisto/flutter'
+		file 'Dockerfile'
 		args '-u root --privileged'
 	    }
 	}
