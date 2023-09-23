@@ -36,7 +36,7 @@ pipeline {
         }
 	stage('AppCenter Distribution') {
   		steps {
-    			appCenter 
+    			appCenter {
      				apiToken: '411767f5695a915073112d6fa6364ad60d1f7a73',
       				ownerName: 'MALKIOT',
       				appName: 'medicalApp',
