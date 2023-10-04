@@ -36,12 +36,11 @@ pipeline {
         }
 	stage('AppCenter Distribution') {
   		steps {
-    			appCenter {
-     				apiToken: 'da219b3629a9dec63b57a4c8b5ca24cbfde4b1cc',
-      				ownerName: 'MALKIOT',
-      				appName: 'medicalApp',
-      				pathToApp: 'build/app/outputs/flutter-apk/app-release.apk',
-      				distributionGroups: 'medicalApp-Distribution'
+    			appCenter 	apiToken: '8073c81042f89dd7d82741b5a45665481c21618e',
+      					ownerName: 'MALKIOT',
+      					appName: 'medicalApp',
+      					pathToApp: 'build/app/outputs/flutter-apk/app-release.apk',
+      					distributionGroups: 'medicalApp-Distribution'
   		}
 	}
 	stage('Clean') {
