@@ -37,7 +37,7 @@ pipeline {
 	stage('AppCenter Distribution') {
   		steps {
     			appCenter {
-     				apiToken: '85f3fdbab030066b6c409a7697293a56ed091cb9',
+     				apiToken: 'da219b3629a9dec63b57a4c8b5ca24cbfde4b1cc',
       				ownerName: 'MALKIOT',
       				appName: 'medicalApp',
       				pathToApp: 'build/app/outputs/flutter-apk/app-release.apk',
